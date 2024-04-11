@@ -1,0 +1,349 @@
+/* REGLA GENERAL PARA CREAR ESTILOS CSS 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5.  Otros --> reglas CSS y más
+*/
+
+:root {
+    --yellow: #F9D949;
+    --red: #F45050;
+    --gray: #D9D9D9;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ///////////////////////////////////////////CODIGO/////////////////////////////////////////// */
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    background-color: var(--yellow);
+    height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__burger {
+    padding-left: 10px;
+}
+
+.navbar__burger img {
+    width: 60px;
+    height: 60px;   
+}
+
+.navbar__title {
+    padding-right: 35px;
+    font-weight: 500;
+    font-size: 30px;
+    text-shadow: 0px 4px 0px #00000040;
+    color: #3C486B;
+}
+
+.navbar__search-bar{
+    display: none;
+}
+
+.navbar-tools {
+    display: none;
+}
+
+
+
+/* SEARCHBAR MOBILE */
+
+.search-bar {
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    width: 99%;
+    height: 59px;
+    background-color: var(--red);
+    border-radius: 8px;
+}
+
+.search-bar--opacity {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    top: 5px;
+    width: 98%;
+    height: 49px;
+    background-color: #f79e9e;
+    border-radius: 6px;
+}
+
+.search-bar img {
+    width: 34px;
+    height: 34px;
+}
+
+.search-bar__title {
+    font-weight: 500;
+    font-size: 25px;
+    color: #c48791;
+}
+
+/* CATALOGO MOBILE */
+
+.catalogue {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalogue-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 96%;
+    height: 137px;
+    background-color: var(--gray);
+    border-radius: 14px;
+    border: 1px solid #3C486B;
+    cursor: pointer;
+}
+
+.catalogue-breakfast__img{
+    width: 100%;
+    height: 97px;
+    background-size: cover;
+    background-image: url("./img/breakfast.png");
+    border-radius: 13px;
+}
+
+.catalogue-lunch__img{
+    width: 100%;
+    height: 97px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./img/lunch.png");
+    border-radius: 13px;
+}
+
+.catalogue-dinner__img{
+    width: 100%;
+    height: 97px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("./img/Dinner.png");
+    border-radius: 13px;
+}
+
+
+.catalogue h2 {
+    padding-top: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #3c486b;
+}
+
+.ideas {
+    display: none;
+}
+
+/* FOOTER MOBILE */
+
+.tools {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 61px;
+    background-color: var(--gray);
+    list-style: none;
+}
+
+.tools li {
+    cursor: pointer;
+}
+
+
+.tools img {
+    width: 45px;
+    height: 44px;
+}
+
+
+
+@media (min-width: 640px) {
+    .catalogue-cards {
+        width: 598px;
+        height: 232px;
+    }
+    .catalogue-breakfast__img {
+        position: relative;
+        bottom: 20px;
+        width: 549px;
+        height: 166px;
+    }
+    .catalogue-lunch__img {
+        position: relative;
+        bottom: 20px;
+        width: 549px;
+        height: 166px;
+    }
+    .catalogue-dinner__img {
+        position: relative;
+        bottom: 20px;
+        width: 549px;
+        height: 166px;
+    }
+}
+
+@media (min-width: 1024px) {
+    
+    .navbar {
+        display: flex;
+    }
+
+    .navbar__title{
+        padding-left: 50px;
+    }
+    .navbar__burger{
+        display: none;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .navbar__search-bar {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        width: 99%;
+        height: 59px;
+        background-color: var(--red);
+        border-radius: 8px;
+    }
+    
+    .navbar__search-bar--opacity {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+        top: 5px;
+        width: 98%;
+        height: 49px;
+        background-color: #f79e9e;
+        border-radius: 6px;
+    }
+    
+    .navbar__search-bar img {
+        position: relative;
+        right: 100px;
+        width: 34px;
+        height: 34px;
+    }
+    
+    .navbar__search-bar__title {
+        
+        font-weight: 500;
+        font-size: 25px;
+        color: #c48791;
+    }
+    
+
+    .navbar-tools {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 61px;
+        list-style: none;
+    }
+
+    .navbar-tools img {
+        width: 45px;
+        height: 44px;
+    }
+
+    .catalogue {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 40px;
+    }
+    .catalogue-cards {
+        width: 450px;
+        height: 221px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+    .catalogue-breakfast__img {
+        position: relative;
+        bottom: 20px;
+        width: 420px;
+        height: 166px;
+    }
+    .catalogue-lunch__img {
+        position: relative;
+        bottom: 20px;
+        width: 420px;
+        height: 166px;
+    }
+    .catalogue-dinner__img {
+        position: relative;
+        bottom: 20px;
+        width: 420px;
+        height: 166px;
+    }
+
+    .ideas{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        height: 680px;
+        border-radius: 14px;
+        background-color: #3C486B;
+    }
+    
+    .ideas h2 {
+        font-family: Roboto;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: left;
+        color: #F0F0F0B2;
+
+    }
+
+    .ideas p {
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        text-align: center;
+        color: #F0F0F0B2;
+    }
+    
+    footer {
+        display: none;
+    }
+
+}
